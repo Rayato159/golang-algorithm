@@ -33,8 +33,8 @@ func (q *Queue) Dequeue() int {
 	if q.Front == q.Rear {
 		fmt.Println("error, queue is empty")
 	} else {
-		q.Front = (q.Front + 1) % q.Size
 		x = q.Data[q.Front]
+		q.Front = (q.Front + 1) % q.Size
 		q.Data[q.Front] = 0
 		fmt.Println(q.Data, q.Front, q.Rear)
 	}
