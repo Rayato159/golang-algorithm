@@ -39,10 +39,10 @@ func (s *Stack) Pop() int {
 
 func (s *Stack) Peek(i int) int {
 	var x int
-	if s.Data[i] == 0 {
-		fmt.Println("error, not found.")
+	if s.Data[s.Top+i-1] <= 0 {
+		fmt.Println("error, invalid position")
 	} else {
-		x = s.Data[i]
+		x = s.Data[s.Top+i-1]
 	}
 	return x
 }
@@ -52,11 +52,6 @@ func main() {
 	s.Push(10)
 	s.Push(20)
 	s.Push(30)
-	s.Push(40)
-	s.Push(50)
-	fmt.Println(s.Data)
-	s.Pop()
-	s.Pop()
-	s.Pop()
-	fmt.Println(s.Data)
+	fmt.Println(s.Data, s.Top)
+	fmt.Println(s.Peek(1))
 }
