@@ -11,7 +11,7 @@ type Queue struct {
 
 func NewQueue(size int) *Queue {
 	return &Queue{
-		Data:  make([]int, size+2),
+		Data:  make([]int, size+1),
 		Size:  size + 1,
 		Front: 0,
 		Rear:  0,
@@ -49,9 +49,5 @@ func main() {
 	q.Enqueue(30)
 	q.Enqueue(40)
 	q.Enqueue(50)
-	q.Dequeue()
-	q.Dequeue()
-	q.Dequeue()
-	q.Dequeue()
 	q.Dequeue()
 }
