@@ -21,7 +21,7 @@ func (n *Node) AddNode(data int) *Node {
 	}
 	n.Next = t
 	n = t
-	return t
+	return n
 }
 
 func (n *Node) Display() {
