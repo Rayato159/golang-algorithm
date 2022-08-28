@@ -34,9 +34,14 @@ func (n *Node) Display() {
 func main() {
 	head := NewNode(10)
 	last := head
+	fmt.Println(head, last)
 	last = last.AddNode(20)
+	fmt.Println(head, last)
 	last = last.AddNode(30)
+	fmt.Println(head, last)
 	last = last.AddNode(40)
+	fmt.Println(head, last)
 	last = last.AddNode(50)
+	fmt.Println(head, last)
 	head.Display()
 }
