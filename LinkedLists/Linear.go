@@ -20,8 +20,7 @@ func (n *Node) AddNode(data int) *Node {
 		Next: nil,
 	}
 	n.Next = t
-	n = t
-	return n
+	return t
 }
 
 func (n *Node) Display() {
